@@ -1,0 +1,155 @@
+{
+    "profile": {
+        "thumb": null,
+        "full_name": "Shubham Deodia",
+        "email": "shubham.deodia@gmail.com",
+        "phone": "+357 95611720",
+        "location": "Limassol, Cyprus",
+        "headline": "Front End Developer (Advanced)",
+        "websites": [
+            "https://www.linkedin.com/in/shubham-deodia/",
+            "https://github.com/shubham2809"
+        ]
+    },
+    "degrees": {
+        "label": "Education",
+        "contents": [
+            {
+                "title": "Bachelors of Engineering – Information Technology",
+                "organization": "Nagpur University",
+                "organization_url": null,
+                "description": "",
+                "start_date": "2009 April",
+                "end_date": "2013 June"
+            },
+            {
+                "title": "Higher Secondary Education (H.S.C)",
+                "organization": "Maharashtra State Board",
+                "organization_url": "",
+                "description": "",
+                "start_date": "2008 April",
+                "end_date": "2009 May"
+            },
+            {
+                "title": "Secondary Education (S.S.C)",
+                "organization": "Maharashtra State Board ",
+                "organization_url": "",
+                "description": "",
+                "start_date": "2006 April",
+                "end_date": "2007 May"
+            }
+        ]
+    },
+    "positions": {
+        "label": "Work experience",
+        "contents": [
+            {
+                "title": "Software Engineer - Frontend",
+                "organization": "Webfleet Solutions (TomTom Telematics), Leipzig, Germany",
+                "organization_url": "https://www.webfleet.com/en_us/webfleet/",
+                "description": [
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience"
+                ],
+                "start_date": "2020 January",
+                "end_date": "Present"
+            },
+            {
+                "title": "Software Developer - Frontend (Advanced)",
+                "organization": "BriteBill, Cyprus",
+                "organization_url": "",
+                "description": [
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience"
+                ],
+                "start_date": "2018 October",
+                "end_date": "2020 January"
+            },
+            {
+                "title": "Software Developer - Frontend (Experienced)",
+                "organization": "Amdocs, Pune",
+                "organization_url": "",
+                "description": [
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience"
+                ],
+                "start_date": "2016 August",
+                "end_date": "2018 September"
+            },
+            {
+                "title": "Software Developer - Java",
+                "organization": "Amdocs, Pune",
+                "organization_url": "",
+                "description": [
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience",
+                    "Some Details about your work experience"
+                ],
+                "start_date": "2013 July",
+                "end_date": "2016 July"
+            }
+        ]
+    },
+    "skills": {
+        "label": "Skills",
+        "contents": [
+            {
+                "name": "Methodology",
+                "description": "\u003cp\u003e\u003cspan\u003eScrum, JIRA for Tracking\u003c/span\u003e\u003c/p\u003e",
+                "level": 90
+            },
+            {
+                "name": "React.js/Redux",
+                "description": "\u003cp\u003eReact 16+\u003c/p\u003e",
+                "level": 80
+            },
+            {
+                "name": "Web Languages",
+                "description": "\u003cp\u003eHTML5, CSS3, ES6\u003c/p\u003e",
+                "level": "70"
+            },
+            {
+                "name": "Angular",
+                "description": "\u003cp\u003eAngular 2+\u003c/p\u003e\n\u003cp\u003e\u003c/p\u003e",
+                "level": 50
+            },
+            {
+                "name": "Java",
+                "description": "\u003cp\u003eOracle Certified Java Associate - Java SE 7\u003c/p\u003e",
+                "level": 60
+            }
+        ]
+    },
+    "dated_stories": {
+        "label": "Transferable Skills",
+        "contents": [
+            {
+                "title": "Material-UI",
+                "organization": "",
+                "organization_url": "",
+                "description": "\u003cul\u003e\n\u003cli\u003eI have worked on a various personal and commercial project based on Material-UI\u003c/li\u003e\n\u003cli\u003eCustomized Material-UI theme (using JSS) as per the project requirement.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp style=\"padding-left: 40px;\"\u003eExample:\u003c/p\u003e\n\u003cp style=\"padding-left: 40px;\"\u003e\u003cspan\u003e\u003c/span\u003e\u003ca href=\"https://github.com/shubham2809/ReactBlog\" target=\"_blank\" rel=\"nofollow noopener\"\u003ehttps://github.com/shubham2809/ReactBlog\u003c/a\u003e\u003c/p\u003e",
+                "start_date": "2019",
+                "end_date": "Present"
+            },
+            {
+                "title": "ELK Stack Implementation",
+                "organization": "",
+                "organization_url": "",
+                "description": "\u003cp\u003eSkill Set: Elasticsearch, Logstash, Kibana, Java, Shell Script.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan\u003eAmdocs mediation processes thousands of events (VOICE, SMS, MMS, DATA, etc.) every day, for various clients daily.\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan\u003eImplemented an Idea to make sense of all this data (events which are rated, failed and recycled). i.e. Visualizing and Analyzing all the data on web-based GUI - Kibana\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e",
+                "start_date": "2016 January",
+                "end_date": "2016 April"
+            }
+        ]
+    }
+}
