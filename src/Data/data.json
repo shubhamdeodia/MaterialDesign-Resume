@@ -44,57 +44,109 @@
         "label": "Work experience",
         "contents": [
             {
+                "id": 1,
                 "title": "Software Engineer - Frontend",
-                "organization": "Webfleet Solutions (TomTom Telematics), Leipzig, Germany",
+                "organization": "Webfleet Solutions",
+                "location": "Leipzig, Germany",
                 "organization_url": "https://www.webfleet.com/en_us/webfleet/",
                 "description": [
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience"
+                    {
+                        "id": 1,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 2,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 3,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 4,
+                        "description": "Some Details about your work experience"
+                    }
                 ],
                 "start_date": "2020 January",
                 "end_date": "Present"
             },
             {
+                "id": 2,
                 "title": "Software Developer - Frontend (Advanced)",
-                "organization": "BriteBill, Cyprus",
+                "organization": "BriteBill",
+                "location": "Limassol, Cyprus",
                 "organization_url": "",
                 "description": [
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience"
+                    {
+                        "id": 1,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 2,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 3,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 4,
+                        "description": "Some Details about your work experience"
+                    }
                 ],
                 "start_date": "2018 October",
                 "end_date": "2020 January"
             },
             {
+                "id": 3,
                 "title": "Software Developer - Frontend (Experienced)",
-                "organization": "Amdocs, Pune",
+                "organization": "Amdocs",
+                "location": "Pune, India",
                 "organization_url": "",
                 "description": [
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience"
+                    {
+                        "id": 1,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 2,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 3,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 4,
+                        "description": "Some Details about your work experience"
+                    }
                 ],
                 "start_date": "2016 August",
                 "end_date": "2018 September"
             },
             {
+                "id": 4,
                 "title": "Software Developer - Java",
-                "organization": "Amdocs, Pune",
+                "organization": "Amdocs",
+                "location": "Pune, India",
                 "organization_url": "",
                 "description": [
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience",
-                    "Some Details about your work experience"
+                    {
+                        "id": 1,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 2,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 3,
+                        "description": "Some Details about your work experience"
+                    },
+                    {
+                        "id": 4,
+                        "description": "Some Details about your work experience"
+                    }
                 ],
                 "start_date": "2013 July",
                 "end_date": "2016 July"

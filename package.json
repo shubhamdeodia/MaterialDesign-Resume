@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.47",
     "@material-ui/styles": "latest",
     "classnames": "^2.2.6",
     "react": "^16.13.1",
@@ -33,9 +34,9 @@
     ]
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/eslint": "^6.1.8",
     "@types/eslint-plugin-prettier": "^2.2.0",
-    "@types/classnames": "^2.2.10",
     "@types/prettier": "^1.19.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.6.0",

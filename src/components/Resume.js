@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header/Header'
 import Experience from './Experience/Experience'
-
+import cvData from '../Data/data.json'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import { Container } from '@material-ui/core'
@@ -9,6 +9,10 @@ import experienceBackgroundImage from '../images/Experience.png'
 import skillsBackgroundImage from '../images/Skills.png'
 
 import { makeStyles, createStyles } from '@material-ui/core/styles'
+import { useState } from 'react'
+import Skills from './Skills/Skills'
+import ContactInfoAndDescription from './Contact/ContactInfo'
+import Footer from './Footer/Footer'
 
 const useStyles = makeStyles((theme) => createStyles({
     root: {
@@ -17,16 +21,6 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     grid: {
         marginTop: 50
-    },
-    headerTitle: {
-        float: 'right',
-        flexGrow: 1
-    },
-    appBar: {
-        margin: '0 auto',
-        maxWidth: 1028,
-        left: '50%',
-        transform: 'translate(-50%, 0)'
     },
     expPaper: {
         padding: theme.spacing(2),
@@ -55,15 +49,31 @@ const useStyles = makeStyles((theme) => createStyles({
         marginTop: '64px'
     },
     experienceBlock: {
-        marginTop: '40px',
-        '&:first-child': {
-            marginTop: '64px'
-        }
+        marginTop: '40px'
+    },
+
+    skillsBlock: {
+        marginTop: '40px'
     }
 }))
 
 export const Resume = (props) => {
     const classes = useStyles()
+
+    const [isLoading, setIsLoading] = useState(true)
+
+    setTimeout(() => {
+        setIsLoading(false)
+    }, 2000)
+
+    const experiences = cvData.positions.contents.map((position) => {
+        return (
+            <div key={position.id} className={classes.experienceBlock} >
+                <Experience isLoading={isLoading} position={position} />
+            </div>
+        )
+    })
+
     return (
         <div className={classes.root}>
             <Container style={{ padding: '8px' }} >
@@ -73,16 +83,22 @@ export const Resume = (props) => {
                         {/* Experience Block */}
                         <Paper className={classes.expPaper}>
                             <Container>
-                                <div className={classes.experienceBlock}>
-                                    <Experience />
-                                </div>
+                                {experiences}
                             </Container>
                         </Paper> </Grid>
                     <Grid item xs={12} sm={12} md={4} lg={4}>
                         {/* Skills Block */}
-                        <Paper className={classes.skillPaper}>xs=12 sm=6 md=3</Paper>
+                        <Paper className={classes.skillPaper}>
+                            <Container>
+                                <div className={classes.skillsBlock}>
+                                    <ContactInfoAndDescription />
+                                    <Skills />
+                                </div>
+                            </Container>
+                        </Paper>
                     </Grid>
                 </Grid>
+                <Footer />
             </Container>
         </div>)
 }

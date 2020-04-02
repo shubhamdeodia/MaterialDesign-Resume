@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 
 import Resume from './components/Resume'
 import { CssBaseline } from '@material-ui/core'
