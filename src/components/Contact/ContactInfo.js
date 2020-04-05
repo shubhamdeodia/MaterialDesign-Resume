@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Box, Avatar } from '@material-ui/core'
 import avatar from '../../images/avatar.jpg'
+import useTypingEffect from '../../hooks/useTypingEffect'
 import { Phone, Mail } from '@material-ui/icons'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
@@ -72,42 +73,7 @@ function ContactInfoAndDescription (props) {
 
     const classes = useStyles()
 
-    const [dataText, _] = useState([profile.description])
-
-    const [text, setText] = useState('')
-    const [isDeleting, setIsDeleting] = useState(false)
-    const [speed, setSpeed] = useState(150)
-    const [loop, setLoop] = useState(0)
-
-    const index = loop % dataText.length
-    const fullText = dataText[index]
-
-    const handleTyping = () => {
-        setText(
-            isDeleting
-                ? fullText.substring(0, text.length - 1)
-                : fullText.substring(0, text.length + 1)
-        )
-
-        setSpeed(isDeleting ? 30 : 100)
-
-        if (!isDeleting && text === fullText) {
-            // stop for o.5 seconds and start deleting
-            setTimeout(() => setIsDeleting(true), 500)
-        }
-        else if (isDeleting && text === '') {
-            // reach the end, stop deleting and increment loop
-            setIsDeleting(false)
-            setLoop(loop + 1)
-        }
-    }
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            handleTyping()
-        }, speed)
-        return () => clearTimeout(timer)
-    })
+    const [text, setSpeed] = useTypingEffect(['Stay at Home', 'Stay Safe', profile.description])
 
     return (
         <div className={classes.contactInfo}>

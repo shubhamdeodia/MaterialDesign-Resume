@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { ThemeDispatchContext } from '../../context/ThemeContext'
-import { Toolbar, AppBar, Fab } from '@material-ui/core'
+
+import { Toolbar, AppBar, Fab, Box } from '@material-ui/core'
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -14,7 +15,9 @@ const useStyles = makeStyles((theme) => ({
         left: '50%',
         transform: 'translate(-50%, 0)'
     },
-    grow: {
+    footer: {
+        display: 'flex',
+        justifyContent: 'space-between',
         flexGrow: 1
     },
     fabButton: {
@@ -40,7 +43,23 @@ function Footer () {
                     onClick={() => dispatch({ type: 'TOGGLE_THEME' })}>
                     <WbIncandescentIcon />
                 </Fab>
-                <div className={classes.grow} />
+                <div className={classes.footer}>
+                    <Box
+                        textAlign='center'
+                        color='common.white'
+                        fontSize={{ xs: '10px', sm: '10px', md: '12px', lg: '12px' }}
+                        fontWeight='fontWeightBold'>
+                    Made with 💚 by Shubham D
+                    </Box>
+                    <Box
+                        textAlign='center'
+                        color='common.white'
+                        fontSize={{ xs: '10px', sm: '10px', md: '12px', lg: '12px' }}
+                        fontWeight='fontWeightBold'>
+                     No © Issues, Reuse as you like
+                    </Box>
+                </div>
+
             </Toolbar>
         </AppBar>
     )
