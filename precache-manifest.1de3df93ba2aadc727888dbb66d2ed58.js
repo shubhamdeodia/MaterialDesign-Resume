@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3a264e75843c7e416e2a7e2b294e3853",
+    "revision": "8f4b8a576f9f0ca173b64de6caaf0fbd",
     "url": "/MaterialDesign-Resume/index.html"
   },
   {
-    "revision": "1fb3c7e88601ec49beab",
+    "revision": "b2345739e20a5f02a1d2",
     "url": "/MaterialDesign-Resume/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "26485e0b9619f43ac800",
-    "url": "/MaterialDesign-Resume/static/js/2.7cb78b99.chunk.js"
+    "revision": "854b38beef2c038ba105",
+    "url": "/MaterialDesign-Resume/static/js/2.064a54c3.chunk.js"
   },
   {
     "revision": "d09ac505fec0e9130a1d5b85fb3fa6dc",
-    "url": "/MaterialDesign-Resume/static/js/2.7cb78b99.chunk.js.LICENSE.txt"
+    "url": "/MaterialDesign-Resume/static/js/2.064a54c3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1fb3c7e88601ec49beab",
-    "url": "/MaterialDesign-Resume/static/js/main.d5ff7576.chunk.js"
+    "revision": "b2345739e20a5f02a1d2",
+    "url": "/MaterialDesign-Resume/static/js/main.82bd1820.chunk.js"
   },
   {
     "revision": "4cd4ff16b5c338bed0be",
