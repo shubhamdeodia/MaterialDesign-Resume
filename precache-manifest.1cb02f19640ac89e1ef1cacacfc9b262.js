@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ea3801b700b2bd413c704a9de151ac7",
+    "revision": "352fe473c969ea7c505b4ebd4abb4a61",
     "url": "/MaterialDesign-Resume/index.html"
   },
   {
-    "revision": "4d425dfeffdd56903573",
+    "revision": "839af4d3c610dceef75d",
     "url": "/MaterialDesign-Resume/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MaterialDesign-Resume/static/js/2.7cb78b99.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4d425dfeffdd56903573",
-    "url": "/MaterialDesign-Resume/static/js/main.9504b885.chunk.js"
+    "revision": "839af4d3c610dceef75d",
+    "url": "/MaterialDesign-Resume/static/js/main.48e46a3f.chunk.js"
   },
   {
     "revision": "4cd4ff16b5c338bed0be",
