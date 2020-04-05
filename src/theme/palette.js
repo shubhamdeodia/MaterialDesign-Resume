@@ -29,7 +29,7 @@ export const paletteLight = {
     secondary: {
         contrastText: white,
         main: '#7d58ff',
-        light: '#F6F9FD',
+        light: '#A58BFF',
         dark: '#37248F'
     },
     success: {

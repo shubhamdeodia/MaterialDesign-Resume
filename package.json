@@ -1,6 +1,7 @@
 {
   "name": "Material-UI-Resume",
   "version": "0.1.0",
+  "homepage": "http://shubhamdeodia.github.io/MaterialDesign-Resume",
   "private": true,
   "dependencies": {
     "@material-ui/core": "latest",
@@ -15,6 +16,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

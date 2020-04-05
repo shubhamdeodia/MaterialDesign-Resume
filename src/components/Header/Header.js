@@ -20,8 +20,9 @@ const useStyles = makeStyles((theme) => ({
 function Header (props) {
     const classes = useStyles()
     const { profile } = props
+
     return (
-        <AppBar className={classes.appBar} >
+        <AppBar position='fixed' className={classes.appBar} >
             <Toolbar>
                 <div className={classes.headerTitle}>
                     <Typography align='right' variant='h6'>
@@ -32,6 +33,7 @@ function Header (props) {
                     </Typography>
                 </div>
             </Toolbar>
+
         </AppBar>
     )
 }

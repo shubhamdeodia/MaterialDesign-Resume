@@ -97,13 +97,13 @@ function ExperienceDescription (props) {
                             <ListItemText
                                 className={classes.listText}
                                 primary={
-                                    <Box bgcolor='background.paper'
+                                    <Box bgcolor='transparent'
                                         textAlign='left'
                                         style={{
                                             cursor: description.link ? 'pointer' : ''
                                         }}
-                                        onClick={() => window.open(`${description.link}`, '_blank')}
-                                        color={description.link ? 'default.dark' : 'common.neutral'}
+                                        onClick={() => description.link ? window.open(`${description.link}`, '_blank') : null}
+                                        color={description.link ? 'secondary.light' : 'common.neutral'}
                                         fontSize={12} >
                                         {description.text}
                                     </Box>
