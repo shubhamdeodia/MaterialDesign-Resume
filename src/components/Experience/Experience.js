@@ -10,22 +10,28 @@ const useStyles = makeStyles((theme) => {
             flexBasis: '100%',
             alignItems: 'flex-start',
             justifyContent: 'center',
-            background: 'transparent'
+            background: 'transparent',
+            marginTop: '40px'
         }
     }
 })
 
 function Experience (props) {
-    const { position, isLoading } = props
-    const classes = useStyles()
+    const { positions, isLoading } = props
+    const classes = useStyles(props)
 
-    return (
-        <div
-            className={classes.experienceSection}>
-            <ExperienceDuration isLoading={isLoading} position={position} classes={classes} />
-            <ExperienceDescription isLoading={isLoading} position={position} classes={classes} />
-        </div>
-    )
+    const experience = positions.contents.map((position) => {
+        return (
+            <div
+                key={position.id}
+                className={classes.experienceSection}>
+                <ExperienceDuration isLoading={isLoading} position={position} />
+                <ExperienceDescription isLoading={isLoading} position={position} />
+            </div>
+        )
+    })
+
+    return experience
 }
 
 export default Experience

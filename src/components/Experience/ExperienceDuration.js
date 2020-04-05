@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
-import isMobileHook from '../../customHooks/isMobileHook'
+import React, { useState, useContext, memo, useCallback } from 'react'
 import { Tooltip } from '@material-ui/core'
 import { Box } from '@material-ui/core'
+import classnames from 'classnames'
+import moment from 'moment'
+
+import { ThemeStateContext } from '../../context/ThemeContext'
 
 import { Card } from '@material-ui/core'
 import Skeleton from '@material-ui/lab/Skeleton'
@@ -26,55 +29,91 @@ const useStyles = makeStyles((theme) => {
                 minHeight: 90,
                 minWidth: 90
             }
+        },
+        elevation2: {
+            backgroundColor: '#222222'
+        },
+        elevation6: {
+            backgroundColor: '#2C2C2C'
         }
     }
 })
 
 function ExperienceDuration (props) {
     const { position, isLoading } = props
+    const themeState = useContext(ThemeStateContext)
 
     const classes = useStyles()
+    const [zDepth, setZDepth] = useState(2)
+
+    const onMouseOver = () => setZDepth(6)
+    const onMouseOut = () => setZDepth(2)
 
     const experienceDurationSkeleton = (
-        <Skeleton animation='wave' variant='rect' height={109} width={109} />
+        <Skeleton animation='wave' variant='rect' height={109} width={120} />
     )
 
-    const [zDepth, setzDepth] = useState(0)
-    const [tooltipIsOpen, setTooltipIsOpen] = useState(false)
-    const isMobile = isMobileHook()
+    const durationBoxClass = classnames(
+        classes.durationBox,
+        { [classes.elevation2]: themeState.isDarkMode && zDepth === 2 },
+        { [classes.elevation6]: themeState.isDarkMode && zDepth === 6 }
+    )
 
-    const onMouseOver = () => setzDepth(8)
-    const onMouseOut = () => setzDepth(4)
+    const { start_date, end_date } = position
 
-    const onMouseOverTooltip = () => setTooltipIsOpen(true)
-    const onMouseOutTooltip = () => setTooltipIsOpen(false)
+    const getDifference = () => {
+        let endDate = moment(end_date)
+        if (end_date.toLowerCase() === 'present') {
+            endDate = moment()
+        }
+
+        const monthDifference = moment(start_date).diff(endDate, 'months', true)
+        const absMonth = Math.abs(Math.floor(monthDifference))
+        return absMonth
+    }
+
+    const memoizedCallback = useCallback(
+        () => getDifference(),
+        [start_date, end_date]
+    )
+
+    const duration = memoizedCallback()
 
     if (isLoading) {
         return experienceDurationSkeleton
     }
-    console.log(isMobile)
+
     return (
-
         <Tooltip
-
             arrow
-
-            title='2019 Jan - 2020 Jan'
+            title={<Box
+                fontSize={12}>
+                {`${start_date} - ${end_date}`}
+            </Box>}
+            style={{ fontSize: '26px' }}
             placement='right'
-            aria-label='2019 Jan - 2020 Jan'>
-            <Card className={classes.durationBox}
+            aria-label={`${start_date} - ${end_date}`}>
+            <Card className={durationBoxClass}
                 onMouseOver={onMouseOver}
                 onMouseOut={onMouseOut}
                 elevation={zDepth}>
-                <Box color='white' textAlign='center' fontSize={{ xs: '26px', sm: '30px', md: '32px', lg: '36px' }} fontWeight='fontWeightBold'>
-                        3
+                <Box
+                    textAlign='center'
+                    color='common.white'
+                    fontSize={{ xs: '26px', sm: '30px', md: '32px', lg: '36px' }}
+                    fontWeight='fontWeightBold'>
+                    { Math.abs(Math.floor(duration > 12 ? duration / 12 : duration % 12))}
                 </Box>
-                <Box color='white' textAlign='center' fontSize={{ xs: '14px', sm: '16px', md: '18px', lg: '18px' }} fontWeight='fontWeightBold'>
-                        Months
+                <Box
+                    textAlign='center'
+                    color='common.white'
+                    fontSize={{ xs: '14px', sm: '16px', md: '18px', lg: '18px' }}
+                    fontWeight='fontWeightBold'>
+                    { duration > 12 ? 'Years' : 'Months' }
                 </Box>
             </Card>
         </Tooltip>
     )
 }
 
-export default ExperienceDuration
+export default memo(ExperienceDuration)

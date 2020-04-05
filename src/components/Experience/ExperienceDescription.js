@@ -1,14 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { Typography } from '@material-ui/core'
-import { Box } from '@material-ui/core'
-import List from '@material-ui/core/List'
-import ArrowRightRoundedIcon from '@material-ui/icons/ArrowRightRounded'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import Skeleton from '@material-ui/lab/Skeleton'
+import { ArrowRightRounded } from '@material-ui/icons'
+import { Typography, Box, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
 
+import { Skeleton } from '@material-ui/lab'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => {
@@ -17,13 +12,25 @@ const useStyles = makeStyles((theme) => {
             paddingLeft: theme.spacing(4),
             display: 'flex',
             flexDirection: 'column',
-            flexBasis: '100%'
+            flexBasis: '100%',
+            background: 'transparent'
         },
         companyName: {
-            whiteSpace: 'nowrap'
+            width: 140,
+            height: 'auto',
+            paddingBottom: 10,
+            background: 'transparent',
+            backgroundColor: 'transparent'
+        },
+        position: {
+            background: 'inherit'
+        },
+        location: {
+            background: 'inherit'
         },
         list: {
-            padding: '0px'
+            padding: '0px',
+            background: 'inherit'
         },
         listItem: {
             padding: '0px',
@@ -35,6 +42,9 @@ const useStyles = makeStyles((theme) => {
             marginTop: '5px',
             minWidth: '30px',
             padding: '0px 0px 0px 0px'
+        },
+        listItemText: {
+            margin: 0
         }
     }
 })
@@ -46,7 +56,7 @@ function ExperienceDescription (props) {
 
     const experienceDescriptionSkeleton = (
         <div className={classes.experienceDescription}>
-            <Skeleton animation='wave' variant='text' height={51} />
+            <Skeleton animation='wave' variant='text' width={150} height={100} />
             <Skeleton animation='wave' variant='text' height={17} />
             <Skeleton animation='wave' variant='text' height={25} />
             <Skeleton animation='wave' variant='text' height={66} />
@@ -59,46 +69,48 @@ function ExperienceDescription (props) {
 
     return (
         <div className={classes.experienceDescription}>
+            <img alt={position.organization} src={position.organization_logo} className={classes.companyName} />
             <Box
-                className={classes.companyName}
-                color='primary.main'
-                bgcolor='background.paper'
-                textAlign='left'
-                fontSize={{ xs: '26px', sm: '30px', md: '32px', lg: '36px' }}>
-                {position.organization}
-            </Box>
-            <Box
-                className={classes.companyName}
-                color='primary.main'
+                className={classes.location}
                 bgcolor='background.paper'
                 fontStyle='italic'
                 textAlign='left'
+                color='common.muted'
                 fontSize={12}>
                 {position.location}
             </Box>
             <Box
                 className={classes.position}
-                color='primary.main'
                 fontWeight='bold'
                 bgcolor='background.paper'
                 textAlign='left'
                 fontSize={{ xs: '14px', sm: '16px', md: '18px', lg: '18px' }}>
-
                 {position.title}
             </Box>
             <List className={classes.list}>
-                <ListItem className={classes.listItem}>
-                    <ListItemIcon className={classes.listIcon}>
-                        <ArrowRightRoundedIcon fontSize='small' />
-                    </ListItemIcon>
-                    <ListItemText
-                        className={classes.listText}
-                        primary={
-                            <Typography variant='subtitle2' paragraph >
-                                Designed and developed web-based components for a variety of applications
-                            </Typography>
-                        } />
-                </ListItem>
+                {
+                    position.description.map((description) => (
+                        <ListItem key={description.id} className={classes.listItem}>
+                            <ListItemIcon className={classes.listIcon}>
+                                <ArrowRightRounded fontSize='small' />
+                            </ListItemIcon>
+                            <ListItemText
+                                className={classes.listText}
+                                primary={
+                                    <Box bgcolor='background.paper'
+                                        textAlign='left'
+                                        style={{
+                                            cursor: description.link ? 'pointer' : ''
+                                        }}
+                                        onClick={() => window.open(`${description.link}`, '_blank')}
+                                        color={description.link ? 'default.dark' : 'common.neutral'}
+                                        fontSize={12} >
+                                        {description.text}
+                                    </Box>
+                                } />
+                        </ListItem>
+                    ))
+                }
             </List>
         </div>
     )

@@ -1,61 +1,73 @@
 import React from 'react'
 import Header from './Header/Header'
 import Experience from './Experience/Experience'
-import cvData from '../Data/data.json'
+import cvData from '../data/data.json'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import { Container } from '@material-ui/core'
 import experienceBackgroundImage from '../images/Experience.png'
 import skillsBackgroundImage from '../images/Skills.png'
-
-import { makeStyles, createStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { useState } from 'react'
 import Skills from './Skills/Skills'
 import ContactInfoAndDescription from './Contact/ContactInfo'
 import Footer from './Footer/Footer'
+import Education from './Education/Education'
 
-const useStyles = makeStyles((theme) => createStyles({
-    root: {
-        maxWidth: 1028,
-        margin: '0 auto'
-    },
-    grid: {
-        marginTop: 50
-    },
-    expPaper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        height: 1200,
-        backgroundImage: `url(${experienceBackgroundImage})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: '-25% 25%',
-        [theme.breakpoints.down('md')]: {
-            backgroundPosition: 'center left'
-        }
-    },
-    skillPaper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        height: 1200,
-        backgroundColor: theme.palette.primary.light,
-        backgroundImage: `url(${skillsBackgroundImage})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: '350% 50%',
-        [theme.breakpoints.down('md')]: {
-            backgroundPosition: 'center right'
-        }
-    },
-    divider: {
-        marginTop: '64px'
-    },
-    experienceBlock: {
-        marginTop: '40px'
-    },
+const useStyles = makeStyles((theme) => {
+    return {
+        root: {
+            maxWidth: 1028,
+            margin: '0 auto'
+        },
+        gridContainer: {
+            marginTop: 50,
+            marginBottom: 50
+        },
+        grid: {
+            display: 'flex',
+            flex: 1
+        },
+        expPaper: {
+            padding: theme.spacing(2),
+            textAlign: 'center',
+            minHeight: 1028,
+            overflow: 'auto',
+            flex: 1,
+            backgroundColor: theme.palette.background.paper,
+            backgroundImage: `url(${experienceBackgroundImage})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'auto auto',
+            backgroundPosition: '-25% 25%',
+            [theme.breakpoints.down('sm')]: {
+                backgroundPosition: 'center left'
+            }
+        },
+        skillPaper: {
+            padding: theme.spacing(2),
+            textAlign: 'center',
+            overflow: 'auto',
+            minHeight: 1028,
+            flex: 1,
+            backgroundColor: theme.palette.background.default,
+            backgroundImage: `url(${skillsBackgroundImage})`,
+            backgroundSize: 'auto auto',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: '360% 65%',
+            [theme.breakpoints.down('sm')]: {
+                backgroundPosition: 'center right'
+            }
+        },
 
-    skillsBlock: {
-        marginTop: '40px'
+        experienceBlock: {
+            marginTop: '40px'
+        },
+
+        skillsBlock: {
+            marginTop: '40px'
+        }
     }
-}))
+})
 
 export const Resume = (props) => {
     const classes = useStyles()
@@ -66,33 +78,30 @@ export const Resume = (props) => {
         setIsLoading(false)
     }, 2000)
 
-    const experiences = cvData.positions.contents.map((position) => {
-        return (
-            <div key={position.id} className={classes.experienceBlock} >
-                <Experience isLoading={isLoading} position={position} />
-            </div>
-        )
-    })
-
     return (
+
         <div className={classes.root}>
             <Container style={{ padding: '8px' }} >
-                <Header classes={classes} />
-                <Grid container spacing={1} className={classes.grid}>
-                    <Grid item xs={12} sm={12} md={8} lg={8}>
+                <Header classes={classes} profile={cvData.profile} />
+                <Grid container spacing={1} className={classes.gridContainer}>
+                    <Grid item xs={12} sm={12} md={8} lg={8} className={classes.grid}>
                         {/* Experience Block */}
                         <Paper className={classes.expPaper}>
                             <Container>
-                                {experiences}
+                                <div className={classes.experienceBlock}>
+                                    <Experience isLoading={isLoading} positions={cvData.positions} />
+                                </div>
                             </Container>
-                        </Paper> </Grid>
-                    <Grid item xs={12} sm={12} md={4} lg={4}>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={4} lg={4} className={classes.grid}>
                         {/* Skills Block */}
                         <Paper className={classes.skillPaper}>
                             <Container>
                                 <div className={classes.skillsBlock}>
-                                    <ContactInfoAndDescription />
-                                    <Skills />
+                                    <ContactInfoAndDescription isLoading={isLoading} profile={cvData.profile} />
+                                    <Education isLoading={isLoading} education={cvData.education} />
+                                    <Skills isLoading={isLoading} skills={cvData.skills} />
                                 </div>
                             </Container>
                         </Paper>
@@ -100,7 +109,9 @@ export const Resume = (props) => {
                 </Grid>
                 <Footer />
             </Container>
-        </div>)
+        </div>
+
+    )
 }
 
 export default Resume

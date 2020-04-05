@@ -7,7 +7,9 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.47",
     "@material-ui/styles": "latest",
+    "@types/moment": "^2.13.0",
     "classnames": "^2.2.6",
+    "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
@@ -37,6 +39,7 @@
     "@types/classnames": "^2.2.10",
     "@types/eslint": "^6.1.8",
     "@types/eslint-plugin-prettier": "^2.2.0",
+    "@types/gh-pages": "^2.2.0",
     "@types/prettier": "^1.19.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.6.0",
@@ -49,6 +52,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
+    "gh-pages": "^2.2.0",
     "prettier": "^2.0.2"
   }
 }

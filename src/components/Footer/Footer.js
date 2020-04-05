@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeDispatchContext } from '../../context/ThemeContext'
 import { Toolbar, AppBar, Fab } from '@material-ui/core'
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
-    appBar: {
+    bottomAppBar: {
         top: 'auto',
         bottom: 0,
         height: 50,
@@ -28,10 +29,15 @@ const useStyles = makeStyles((theme) => ({
 
 function Footer () {
     const classes = useStyles()
+    const dispatch = useContext(ThemeDispatchContext)
     return (
-        <AppBar position='fixed' color='primary' className={classes.appBar}>
+        <AppBar position='fixed' color='primary' className={classes.bottomAppBar}>
             <Toolbar>
-                <Fab color='secondary' aria-label='darkMode' className={classes.fabButton}>
+                <Fab
+                    color='secondary'
+                    aria-label='darkMode'
+                    className={classes.fabButton}
+                    onClick={() => dispatch({ type: 'TOGGLE_THEME' })}>
                     <WbIncandescentIcon />
                 </Fab>
                 <div className={classes.grow} />

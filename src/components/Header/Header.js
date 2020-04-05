@@ -19,15 +19,16 @@ const useStyles = makeStyles((theme) => ({
 
 function Header (props) {
     const classes = useStyles()
+    const { profile } = props
     return (
         <AppBar className={classes.appBar} >
             <Toolbar>
                 <div className={classes.headerTitle}>
                     <Typography align='right' variant='h6'>
-                        <b>Shubham Deodia</b>
+                        <b>{profile.full_name}</b>
                     </Typography>
                     <Typography align='right' variant='subtitle2'>
-                        Software Engineer (Front End Expertise)
+                        {profile.headline}
                     </Typography>
                 </div>
             </Toolbar>

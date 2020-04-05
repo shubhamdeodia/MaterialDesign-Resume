@@ -1,17 +1,16 @@
 {
     "profile": {
-        "thumb": null,
         "full_name": "Shubham Deodia",
         "email": "shubham.deodia@gmail.com",
+        "description": "I am an Engineer with experiences in a variety of fields, all of which synergistically improve my ability to creatively solve problems.",
         "phone": "+357 95611720",
         "location": "Limassol, Cyprus",
-        "headline": "Front End Developer (Advanced)",
-        "websites": [
-            "https://www.linkedin.com/in/shubham-deodia/",
-            "https://github.com/shubham2809"
-        ]
+        "headline": "Software Engineer",
+        "linkedIn":   "https://www.linkedin.com/in/shubham-deodia/",
+        "gitHub": "https://github.com/shubhamdeodia"
+      
     },
-    "degrees": {
+    "education": {
         "label": "Education",
         "contents": [
             {
@@ -47,27 +46,28 @@
                 "id": 1,
                 "title": "Software Engineer - Frontend",
                 "organization": "Webfleet Solutions",
+                "organization_logo": "https://media.webfleet.com/branding/wfs-abc/wfs-abc.svg",
                 "location": "Leipzig, Germany",
                 "organization_url": "https://www.webfleet.com/en_us/webfleet/",
                 "description": [
                     {
                         "id": 1,
-                        "description": "Some Details about your work experience"
+                        "text": "Owns and Maintain some of the modules in the sophisticated fleet tracking app."
                     },
                     {
                         "id": 2,
-                        "description": "Some Details about your work experience"
+                        "text": "Highly focussed on Unit and End-To-End test, using a TDD approach with the help of tools like Jest & Enzyme."
                     },
                     {
                         "id": 3,
-                        "description": "Some Details about your work experience"
+                        "text": "Deep understanding of libraries used to render maps like Google and TomTom"
                     },
                     {
                         "id": 4,
-                        "description": "Some Details about your work experience"
+                        "text": "Collaboration with the Product Owner and Design Team to understand their vision and drive the development in that direction."
                     }
                 ],
-                "start_date": "2020 January",
+                "start_date": "2020 February",
                 "end_date": "Present"
             },
             {
@@ -75,23 +75,25 @@
                 "title": "Software Developer - Frontend (Advanced)",
                 "organization": "BriteBill",
                 "location": "Limassol, Cyprus",
+                "organization_logo": "https://www.mcstan.ie/wp-content/uploads/2016/11/Brite-Bill.png",
                 "organization_url": "",
                 "description": [
                     {
                         "id": 1,
-                        "description": "Some Details about your work experience"
+                        "text": "Lead the design and development of Digital Bills for Telecom clients."
                     },
                     {
                         "id": 2,
-                        "description": "Some Details about your work experience"
+                        "text": "Provided guidance on front-end strategies, standards, and technology decisions."
                     },
                     {
                         "id": 3,
-                        "description": "Some Details about your work experience"
+                        "text": "Deep understanding of React and Redux life-cycle hooks and workflow."
                     },
                     {
                         "id": 4,
-                        "description": "Some Details about your work experience"
+                        "text": "Played an important role in the migration of various UI components from AngularJS to React. I had written a blog about the process on the company's engineering blog portal.",
+                        "link": "https://engineering.britebill.com/2019/02/15/migrating-angularjs-react-2-dependency-injection.html"
                     }
                 ],
                 "start_date": "2018 October",
@@ -103,22 +105,23 @@
                 "organization": "Amdocs",
                 "location": "Pune, India",
                 "organization_url": "",
+                "organization_logo": "https://www.amdocs.com/amdocsOmega/images/logos/amdocswhite.svg",          
                 "description": [
                     {
                         "id": 1,
-                        "description": "Some Details about your work experience"
+                        "text": "Designed and Developed various functional component for Telecom client's Care, Self-Care and Portal sites."
                     },
                     {
                         "id": 2,
-                        "description": "Some Details about your work experience"
+                        "text": "Designed and Developed various standalone components to React and Redux like Auto-complete Search-bar, Registration forms, Compare Product table, etc."
                     },
                     {
                         "id": 3,
-                        "description": "Some Details about your work experience"
+                        "text": "Keep up with evolving web technologies and best practices including HTML5, CSS3, SCSS, React and Redu"
                     },
                     {
                         "id": 4,
-                        "description": "Some Details about your work experience"
+                        "text": "Self Learned Front-End Technologies to kick off my new career in UI Development"
                     }
                 ],
                 "start_date": "2016 August",
@@ -129,23 +132,24 @@
                 "title": "Software Developer - Java",
                 "organization": "Amdocs",
                 "location": "Pune, India",
+                "organization_logo": "https://www.amdocs.com/amdocsOmega/images/logos/amdocswhite.svg",
                 "organization_url": "",
                 "description": [
                     {
                         "id": 1,
-                        "description": "Some Details about your work experience"
+                        "text": "Worked on development of Offline ( Postpaid ) Mediation System for various Telecom Client."
                     },
                     {
                         "id": 2,
-                        "description": "Some Details about your work experience"
+                        "text": "Working in Mediation Team, helped me gained Industry Standard knowledge of processes, frameworks, and tools e.g. Rally, Perforce, Diameter Protocol, Telecom Rating."
                     },
                     {
                         "id": 3,
-                        "description": "Some Details about your work experience"
+                        "text": "Had conducted a week-long training for one of the clients ( in Ireland ) on usage and benefits of the product"
                     },
                     {
                         "id": 4,
-                        "description": "Some Details about your work experience"
+                        "text": "Worked on various Line of Business for Mediation System like LTE, VoLTE, SMS, MMS, VOICE, DATA, Dropped Call and converting all Event Data Records into various formats like CSV and Binary format for Big Data and Revenue Assurance."
                     }
                 ],
                 "start_date": "2013 July",
@@ -153,55 +157,51 @@
             }
         ]
     },
-    "skills": {
-        "label": "Skills",
-        "contents": [
+    "skills": [
+        {   
+            "id": 1,
+            "label": "Development",
+            "rating": 8,
+            "contents": [
             {
-                "name": "Methodology",
-                "description": "\u003cp\u003e\u003cspan\u003eScrum, JIRA for Tracking\u003c/span\u003e\u003c/p\u003e",
-                "level": 90
+                "name": "ES6, Vanilla JS"
             },
             {
-                "name": "React.js/Redux",
-                "description": "\u003cp\u003eReact 16+\u003c/p\u003e",
-                "level": 80
+                "name": "Jest/Enzyme"
             },
             {
-                "name": "Web Languages",
-                "description": "\u003cp\u003eHTML5, CSS3, ES6\u003c/p\u003e",
-                "level": "70"
+                "name": "Material-UI"
             },
             {
-                "name": "Angular",
-                "description": "\u003cp\u003eAngular 2+\u003c/p\u003e\n\u003cp\u003e\u003c/p\u003e",
-                "level": 50
+                "name": "React | Redux | Hooks"
             },
             {
-                "name": "Java",
-                "description": "\u003cp\u003eOracle Certified Java Associate - Java SE 7\u003c/p\u003e",
-                "level": 60
+                "name": "Node.js"
+            },
+            {
+                "name": "WebDriver.io"
+            },
+            {
+                "name": "HTML5 | CSS3 | SCSS"
+            },
+            {
+                "name": "Git"
             }
-        ]
-    },
-    "dated_stories": {
-        "label": "Transferable Skills",
-        "contents": [
+        ]},
+        {   
+            "id": 2,
+            "label": "Leadership",
+            "rating": 7,
+            "contents": [
             {
-                "title": "Material-UI",
-                "organization": "",
-                "organization_url": "",
-                "description": "\u003cul\u003e\n\u003cli\u003eI have worked on a various personal and commercial project based on Material-UI\u003c/li\u003e\n\u003cli\u003eCustomized Material-UI theme (using JSS) as per the project requirement.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp style=\"padding-left: 40px;\"\u003eExample:\u003c/p\u003e\n\u003cp style=\"padding-left: 40px;\"\u003e\u003cspan\u003e\u003c/span\u003e\u003ca href=\"https://github.com/shubham2809/ReactBlog\" target=\"_blank\" rel=\"nofollow noopener\"\u003ehttps://github.com/shubham2809/ReactBlog\u003c/a\u003e\u003c/p\u003e",
-                "start_date": "2019",
-                "end_date": "Present"
+                "name": "Lean & Agile"
             },
             {
-                "title": "ELK Stack Implementation",
-                "organization": "",
-                "organization_url": "",
-                "description": "\u003cp\u003eSkill Set: Elasticsearch, Logstash, Kibana, Java, Shell Script.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan\u003eAmdocs mediation processes thousands of events (VOICE, SMS, MMS, DATA, etc.) every day, for various clients daily.\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan\u003eImplemented an Idea to make sense of all this data (events which are rated, failed and recycled). i.e. Visualizing and Analyzing all the data on web-based GUI - Kibana\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e",
-                "start_date": "2016 January",
-                "end_date": "2016 April"
+                "name": "Empathetic"
+            },
+            {
+                "name": "Team Oriented"
             }
-        ]
-    }
+        ]}
+    ]
 }
