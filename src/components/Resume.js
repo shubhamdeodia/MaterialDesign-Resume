@@ -14,7 +14,6 @@ import Skills from './Skills/Skills'
 import ContactInfoAndDescription from './Contact/ContactInfo'
 import Footer from './Footer/Footer'
 import Education from './Education/Education'
-import MobileHook from '../hooks/isMobileHook'
 import TabPanel from './MobileTabsPanel/MobileTabsPanel'
 import { Hidden } from '@material-ui/core'
 
@@ -99,8 +98,6 @@ export const Resume = (props) => {
         }
     }
 
-    const isMobile = MobileHook()
-
     const [value, setValue] = React.useState(0)
 
     const handleChange = (event, newValue) => {
@@ -120,7 +117,8 @@ export const Resume = (props) => {
             <Container style={{ padding: '8px' }} >
                 <Header profile={cvData.profile} />
                 <Hidden smUp>
-                    <Tabs variant='fullWidth' value={value} className={classes.tabs} onChange={handleChange} aria-label='simple tabs example'>
+                    <Tabs variant='fullWidth' value={value} className={classes.tabs} onChange={handleChange}
+                        aria-label='My resume tabs'>
                         <Tab label='Experience' {...a11yProps(0)} />
                         <Tab label='Contacts and Skills' {...a11yProps(1)} />
                     </Tabs>
@@ -138,7 +136,7 @@ export const Resume = (props) => {
                                 </Container>
                             </Paper>
                         </Hidden>
-                        <Hidden smUp>
+                        <Hidden mdUp>
                             <TabPanel value={value} index={0}>
                                 <Paper className={classes.expPaper}>
                                     <Container>
@@ -164,7 +162,7 @@ export const Resume = (props) => {
                                 </Container>
                             </Paper>
                         </Hidden>
-                        <Hidden smUp>
+                        <Hidden mdUp>
                             <TabPanel value={value} index={1}>
                                 <Paper className={classes.skillPaper}>
                                     <Container>
