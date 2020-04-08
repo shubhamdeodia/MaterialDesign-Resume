@@ -56,14 +56,18 @@
                     },
                     {
                         "id": 2,
-                        "text": "Highly focussed on Unit and End-To-End test, using a TDD approach with the help of tools like Jest & Enzyme."
+                        "text": "Code reviews and pair-programming"
                     },
                     {
                         "id": 3,
-                        "text": "Deep understanding of libraries used to render maps like Google Maps and TomTom Maps"
+                        "text": "Highly focussed on Unit and End-To-End test, using a TDD approach with the help of tools like Jest & Enzyme."
                     },
                     {
                         "id": 4,
+                        "text": "Deep understanding of libraries used to render maps like Google Maps and TomTom Maps"
+                    },
+                    {
+                        "id": 5,
                         "text": "Collaboration with the Product Owner and Design Team to understand their vision and drive the development in that direction."
                     }
                 ],
