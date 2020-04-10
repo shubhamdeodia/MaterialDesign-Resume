@@ -1,6 +1,6 @@
-import React from 'react'
 import { Box, Chip } from '@material-ui/core'
-import { makeStyles, createStyles } from '@material-ui/core/styles'
+import { createStyles, makeStyles } from '@material-ui/core/styles'
+import React from 'react'
 
 const useStyles = makeStyles((theme) => {
     return createStyles({

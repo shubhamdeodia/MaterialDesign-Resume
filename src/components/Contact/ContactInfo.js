@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { Box, Avatar } from '@material-ui/core'
-import avatar from '../../images/avatar.jpg'
-import useTypingEffect from '../../hooks/useTypingEffect'
-import { Phone, Mail } from '@material-ui/icons'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import { Button } from '@material-ui/core'
+import { Avatar, Box, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import { Mail, Phone } from '@material-ui/icons'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import React from 'react'
+import useTypingEffect from '../../hooks/useTypingEffect'
+import avatar from '../../images/avatar.jpg'
 
 const useStyles = makeStyles((theme) => {
     return {
